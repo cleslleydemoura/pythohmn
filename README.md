@@ -1,3 +1,3 @@
 # Atividades em linguagem Python
 
-<p>Atividades ussando o PyCharm e Google Colab</p>
+<p>Atividades usando o PyCharm e Google Colab</p>
