@@ -51,3 +51,29 @@ comidas = ("carne de sol", "feijão", "arroz", "batata frita", "salada")
 comidas = comidas[:1]+("sorvete", "macarrão") + comidas [2:]
 for comida in comidas:
   print(comida)
+
+
+"""***  Questão de concurso  ***"""
+
+print(list(range(3-1,9+3,3)))
+
+# Função Dict
+# ---> Função Dict() pode ser usada para criar dicionários
+#Pode receber dois tipos de parâmetros
+#   Listas de tuplas, sendo que cada tupla contém uma chave e conteúdo
+#   Sequenciais de itens no formato chave=valor
+
+produtos = dict([(10, 4.5), (20, 5.99)])
+valorProd = produtos [10]
+valorProd
+
+# DICT COM SEQUENCIA DE ITENS CHAVE=VALOR
+# Nesse caso as chaves precisam ser strings, mas não escritas em aspas
+
+# Retorna um novo dicionário cujas chaves são os elementos de lista e cujos valores são todos iguais a valor.
+# Se valor não for especificado, o default é None
+{}.fromkeys([2,3])
+
+dict.fromkeys(["Joao", "Maria"])
+
+# Resolução da Apostila cxcvx
