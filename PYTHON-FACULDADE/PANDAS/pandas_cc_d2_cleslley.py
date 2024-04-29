@@ -58,11 +58,11 @@ df.index = ['Linha1','Linha2','Linha3']
 # Proposta de exercício de Data Frame: Dados de músicas de uma plataforma de streaming
 import pandas as pd
 
-nome_musicas = ["Roly-Poly", "Midas Touch", "Controllah", "festa estranha"]
-artistas = ["T-ARA", "KIOF", "Gorillaz & MC Bin L", "Jumbu"]
-genero = ["Pop", "Pop", "Alternative", "Alternative"]
-ano_lancamento = [2009, 2024, 2023, 2023]
-duracao_musica = [3.3, 2.4, 2.3, 2.5]
+nome_musicas = ["Roly-Poly", "Poster Child", "Exit Music (For A Film)", "Stormrazor", "Sea Of Problems", "Heavenly Key", "Hotel Room Service", "Billie Jeans", "Midas Touch", "Controllah", "festa estranha"]
+artistas = ["T-ARA", "RHCP", "Radio Head", "Pentakill", "Glichery", "Glichery", "Pitibull", "Michael Jackson", "KIOF", "Gorillaz & MC Bin L", "Jumbu"]
+genero = ["Pop", "Rock", "Alternative", "Rock", "Phonk", "Phonk", "Eletronic", "Pop", "Pop", "Alternative", "Alternative"]
+ano_lancamento = [2011, 2022, 1997, 2021, 2023, 2023, 2009, 1983, 2024, 2023, 2023]
+duracao_musica = [3.3, 5.1, 4.7, 4.0, 1.5, 2.5, 3.5, 4.5, 2.4, 2.3, 2.5]
 
 dados_musicais = {
     'Música': nome_musicas,
