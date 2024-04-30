@@ -100,3 +100,40 @@ print("e) Duração (segundos):")
 musica_df['Duração (segundos)'] = musica_df['Duração (segundos)'] * 60
 print(musica_df)
 print()
+
+#Proposta 2: Dados de Estudantes de uma Escola
+#a) Média de Notas
+#b) Aluno com maior nota em Estrutura de Dados
+#c) Aluno mais novo
+#d) Aluno com menor nota em Banco de Dados
+#e) Adicionar uma nova coluna com a média geral das notas import pandas as pd
+
+import pandas as pd
+
+aluno = ["Printf", "SnakeGRTC", "Grimm", "ZeroBullets", "Lorditozito"]
+nota1 = [9, 7, 5, 6, 6]
+nota2 = [8, 6, 5, 9, 7]
+data_nasc_aluno = [2003, 2003, 2002, 2004, 2000]
+
+dados_alunos = {
+    'Alunos' : aluno,
+    '1ª nota' : nota1,
+    '2ª nota' : nota2,
+    'Idade' : data_nasc_aluno,
+}
+
+estudantes_df = pd.DataFrame(dados_alunos)
+print(estudantes_df)
+print()
+
+#a) Média de Notas
+print("a) Média de notas: ")
+media_notas = (estudantes_df['1ª nota'] + estudantes_df['2ª nota']) / 2
+print(media_notas)
+print()
+
+#b) Aluno com maior nota em Estrutura de Dados
+print("b) Aluno com maior nota em Estrutura de Dados: ")
+media_notas = (estudantes_df['1ª nota'] + estudantes_df['2ª nota']) / 2
+print(media_notas)
+print()
