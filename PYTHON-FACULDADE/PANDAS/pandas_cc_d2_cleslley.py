@@ -102,6 +102,7 @@ print(musica_df)
 print()
 
 #Proposta 2: Dados de Estudantes de uma Escola
+
 #a) Média de Notas
 #b) Aluno com maior nota em Estrutura de Dados
 #c) Aluno mais novo
@@ -110,15 +111,19 @@ print()
 
 import pandas as pd
 
-aluno = ["Printf", "SnakeGRTC", "Grimm", "ZeroBullets", "Lorditozito"]
-nota1 = [9, 7, 5, 6, 6]
-nota2 = [8, 6, 5, 9, 7]
+aluno = ["Cleslley", "Victor", "Gabriel A", "César", "Guilherme"]
+notaEd1 = [9, 7, 5, 6, 6]
+notaEd2 = [10, 9, 7, 10, 8]
+notaBd1 = [8, 6, 5, 10, 7]
+notaBd2 = [9, 9, 8, 9, 8]
 data_nasc_aluno = [2003, 2003, 2002, 2004, 2000]
 
 dados_alunos = {
     'Alunos' : aluno,
-    '1ª nota' : nota1,
-    '2ª nota' : nota2,
+    'Nota ED 1' : notaEd1,
+    'Nota ED 2' : notaEd2,
+    'Nota BD 1' : notaBd1,
+    'Nota BD 2' : notaBd2,
     'Idade' : data_nasc_aluno,
 }
 
@@ -127,13 +132,42 @@ print(estudantes_df)
 print()
 
 #a) Média de Notas
-print("a) Média de notas: ")
-media_notas = (estudantes_df['1ª nota'] + estudantes_df['2ª nota']) / 2
+print("a) Média de notas de Estrutura de Dados: ")
+media_notas = (estudantes_df['Nota ED 1'] + estudantes_df['Nota ED 2']) / 2
+print(media_notas)
+print()
+print("Média de notas de Banco de Dados: ")
+media_notas = (estudantes_df['Nota BD 1'] + estudantes_df['Nota BD 2']) / 2
 print(media_notas)
 print()
 
 #b) Aluno com maior nota em Estrutura de Dados
 print("b) Aluno com maior nota em Estrutura de Dados: ")
-media_notas = (estudantes_df['1ª nota'] + estudantes_df['2ª nota']) / 2
-print(media_notas)
+estudantes_df['Média ED'] = (estudantes_df['Nota ED 1'] + estudantes_df['Nota ED 2']) / 2
+aluno_maior_nota_ed = estudantes_df.loc[estudantes_df['Média ED'].idxmax()]['Alunos']
+print(aluno_maior_nota_ed)
+print()
+print("Aluno com maior nota em Banco de Dados: ")
+estudantes_df['Média BD'] = (estudantes_df['Nota BD 1'] + estudantes_df['Nota BD 2']) / 2
+aluno_maior_nota_bd = estudantes_df.loc[estudantes_df['Média BD'].idxmax()]['Alunos']
+print(aluno_maior_nota_bd)
+print()
+
+#c) Aluno mais novo
+print("c) Aluno mais novo: ")
+aluno_mais_novo = estudantes_df.loc[estudantes_df['Idade'].idxmax()]['Alunos']
+print(aluno_mais_novo)
+print()
+
+#d) Aluno com menor nota em Banco de Dados
+print("d) Aluno com menor nota em Banco de Dados: ")
+estudantes_df['Média BD'] = (estudantes_df['Nota BD 1'] + estudantes_df['Nota BD 2']) / 2
+aluno_menor_nota_bd = estudantes_df.loc[estudantes_df['Média BD'].idxmin()]['Alunos']
+print(aluno_menor_nota_bd)
+print()
+
+#e) Adicionar uma nova coluna com a média geral das notas import pandas as pd
+print("e) Adicionar uma nova coluna com a média geral das notas: ")
+estudantes_df['Média Geral'] = (estudantes_df['Nota ED 1'] + estudantes_df['Nota ED 2'] + estudantes_df['Nota BD 1'] + estudantes_df['Nota BD 2']) / 4
+print(estudantes_df)
 print()
