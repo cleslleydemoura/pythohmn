@@ -170,4 +170,64 @@ print()
 print("e) Adicionar uma nova coluna com a média geral das notas: ")
 estudantes_df['Média Geral'] = (estudantes_df['Nota ED 1'] + estudantes_df['Nota ED 2'] + estudantes_df['Nota BD 1'] + estudantes_df['Nota BD 2']) / 4
 print(estudantes_df)
+print(estudantes_df.shape)
+display(estudantes_df)
+
+#Dados de Alunos de uma Escola:
+import pandas as pd
+
+aluno = ["Breno", "Cleslley", "William"]
+serie = ["3º ano", "3º ano", "3º ano"]
+nota1 = [9, 9, 9]
+nota2 = [10, 9, 7]
+idade_aluno = [21, 20, 19]
+
+dados_alunos = {
+    'Nome' : aluno,
+    'Série' : serie,
+    'Primeira Nota' : nota1,
+    'Segunda Nota' : nota2,
+    'Idade' : idade_aluno
+}
+
+estudantes_df = pd.DataFrame(dados_alunos)
+print(estudantes_df)
 print()
+
+print("Média Final: ")
+media_notas = (estudantes_df['Primeira Nota'] + estudantes_df['Segunda Nota']) / 2
+print(media_notas)
+print()
+
+# a) Quantas colunas o DataFrame possui?
+print("a) Quantas colunas o DataFrame possui? ")
+cols = estudantes_df.shape[0]
+print("Columns: " + str(cols))
+# b) Qual é o nome da segunda pessoa na lista?
+print("b) Qual é o nome da segunda pessoa na lista? ")
+nome_segunda_pessoa = estudantes_df.iloc[1]['Nome']
+print(nome_segunda_pessoa)
+# c) Qual é a média das idades?
+print("c) Qual é a média das idades? ")
+media_idades = estudantes_df['Idade'].mean()
+print("Média das idades: " + str(media_idades))
+# d) Qual é a Série do terceiro indivíduo da lista?
+print("d) Qual é a Série do quarto indivíduo da lista? ")
+print(estudantes_df.iloc[2][1])
+# e) Adicione uma nova pessoa ao DataFrame.
+print("e) Adicione uma nova pessoa ao DataFrame. ")
+nova_pessoa = {
+    'Nome': 'Kadidja',
+    'Série': '3º ano',
+    'Primeira Nota': 8,
+    'Segunda Nota': 9,
+    'Idade': 25
+}
+estudantes_df = pd.concat([estudantes_df, pd.DataFrame(nova_pessoa, index=[3])], ignore_index=True)
+print(estudantes_df)
+# f) Remova a terceira pessoa do DataFrame.
+print(" f) Remova a terceira pessoa do DataFrame.")
+estudantes_df = estudantes_df.drop(3)
+print(estudantes_df)
+print(estudantes_df.shape)
+display(estudantes_df)
