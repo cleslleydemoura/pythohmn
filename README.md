@@ -1,4 +1,7 @@
 # Atividades em linguagem Python
 
 <p>Atividades de Python</p>
-<p>Editor de código: Google Collab</p>
+
+```
+Atividades realizadas para apreendizado da linguagem Python. Editor principal: Google Colab.
+```
